@@ -25,9 +25,11 @@ Project ini merupakan template Laravel yang sudah terintegrasi dengan Docker, me
 
 # 1️⃣ Clone Repository
 $ git clone https://github.com/MuhammadSultanBilnadzari/docker-laravel-mysql.git
+
+# 2️⃣ Masuk ke Folder
 $ cd docker-laravel-mysql
 
-# 2️⃣ Salin File .env
+# 3️⃣ Salin File .env
 $ cp .env.example .env
 
 # ⚙️ Konfigurasi Database di .env
@@ -38,7 +40,7 @@ $ cp .env.example .env
 - DB_USERNAME=laraveluser
 - DB_PASSWORD=laravelpass
 
-# 3️⃣ Jalankan Docker
+# 4️⃣ Jalankan Docker
 $ docker-compose up -d --build
 
 # 🛠 Container yang akan berjalan:
@@ -46,19 +48,19 @@ $ docker-compose up -d --build
 - phpMyAdmin → http://localhost:8080
 - MariaDB Database Server
 
-# 4️⃣ Masuk ke Container Laravel
+# 5️⃣ Masuk ke Container Laravel
 $ docker exec -it docker-laravel-mysql-app bash
 
-# 5️⃣ Install Dependency Laravel
+# 6️⃣ Install Dependency Laravel
 $ composer install
 
-# 6️⃣ Generate APP Key
+# 7️⃣ Generate APP Key
 $ php artisan key:generate
 
-# 7️⃣ Jalankan Migrasi
+# 8️⃣ Jalankan Migrasi
 $ php artisan migrate
 
-# 8️⃣ Buat Symbolic Link ke Folder Storage
+# 9️⃣ Buat Symbolic Link ke Folder Storage
 $ php artisan storage:link
 
 # 🛠 Akses phpMyAdmin
