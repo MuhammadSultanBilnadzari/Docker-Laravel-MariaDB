@@ -71,6 +71,6 @@ URL: http://localhost:8000/storage/uploads/namafile.jpg
 
 
 # 🧑‍💻 Author
-Muhammad Sultan Bilnadzari
-📍 Lhokseumawe, Aceh
-📅 25 May 2025
+-Muhammad Sultan Bilnadzari
+-📍 Lhokseumawe, Aceh
+-📅 25 May 2025
