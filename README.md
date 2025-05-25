@@ -33,7 +33,7 @@ $ cd Docker-Laravel-Mariadb
 $ cd src
 
 # #️⃣ Salin File .env
-$ cp .env.example .env
+$ mv .env.example .env
 
 # ⚙️ Konfigurasi Database di .env
 DB_CONNECTION=mysql
