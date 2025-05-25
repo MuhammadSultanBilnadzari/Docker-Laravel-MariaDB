@@ -73,18 +73,18 @@ apt-get install nano -y
 $ nano /etc/apache2/sites-available/000-default.conf
 
 # ⚙️ Konfigurasi Apache Service 000-default.conf
-<VirtualHost *:80>
-    ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/html/public
+    <VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html/public
 
-    <Directory /var/www/html/public>
-        AllowOverride All
-        Require all granted
-    </Directory>
+        <Directory /var/www/html/public>
+            AllowOverride All
+            Require all granted
+        </Directory>
 
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+    </VirtualHost>
 
 # #️⃣ Restart Apache
 $ service apache2 restart
