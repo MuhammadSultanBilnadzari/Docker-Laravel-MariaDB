@@ -9,14 +9,14 @@ Project ini merupakan template Laravel yang sudah terintegrasi dengan Docker, me
 ---
 
 # 📂 Struktur Project (Singkat)
-docker-laravel-mariadb/
-├── docker-compose.yml
-├── Dockerfile
-├── src/                  ← Laravel project ada di sini
-│   ├── app/
-│   ├── public/
-│   └── ...
-└── README.md
+- docker-laravel-mariadb/
+- ├── docker-compose.yml
+- ├── Dockerfile
+- ├── src/                  ← Laravel project ada di sini
+- │   ├── app/
+- │   ├── public/
+- │   └── ...
+- └── README.md
 
 ---
 
@@ -30,12 +30,12 @@ $ cd docker-laravel-mysql
 $ cp .env.example .env
 
 # ⚙️ Konfigurasi Database di .env
-DB_CONNECTION=mysql
-DB_HOST=db
-DB_PORT=3306
-DB_DATABASE=laravel
-DB_USERNAME=laraveluser
-DB_PASSWORD=laravelpass
+- DB_CONNECTION=mysql
+- DB_HOST=db
+- DB_PORT=3306
+- DB_DATABASE=laravel
+- DB_USERNAME=laraveluser
+- DB_PASSWORD=laravelpass
 
 # 3️⃣ Jalankan Docker
 $ docker-compose up -d --build
