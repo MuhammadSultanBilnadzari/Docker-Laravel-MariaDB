@@ -1,6 +1,7 @@
 # 🚀 Docker + Laravel + MariaDB
 
 Project ini merupakan template Laravel yang sudah terintegrasi dengan Docker, menggunakan:
+- Docker
 - Laravel 12.x
 - MariaDB
 - phpMyAdmin
