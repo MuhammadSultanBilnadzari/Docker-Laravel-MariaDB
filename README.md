@@ -23,24 +23,27 @@ Project ini merupakan template Laravel yang sudah terintegrasi dengan Docker, me
 
 ## 📦 Langkah Instalasi
 
-# 1️⃣ Clone Repository
+# #️⃣ Clone Repository
 $ git clone https://github.com/MuhammadSultanBilnadzari/Docker-Laravel-Mariadb.git
 
-# 2️⃣ Masuk ke Folder
+# #️⃣ Masuk ke Folder
 $ cd Docker-Laravel-Mariadb
 
-# 3️⃣ Salin File .env
+# #️⃣ Masuk ke folder src (Laravel)
+$ cd src
+
+# #️⃣ Salin File .env
 $ cp .env.example .env
 
 # ⚙️ Konfigurasi Database di .env
-- DB_CONNECTION=mysql
-- DB_HOST=db
-- DB_PORT=3306
-- DB_DATABASE=laravel
-- DB_USERNAME=laraveluser
-- DB_PASSWORD=laravelpass
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=laraveluser
+DB_PASSWORD=laravelpass
 
-# 4️⃣ Jalankan Docker
+# #️⃣ Jalankan Docker
 $ docker-compose up -d --build
 
 # 🛠 Container yang akan berjalan:
@@ -48,20 +51,43 @@ $ docker-compose up -d --build
 - phpMyAdmin → http://localhost:8080
 - MariaDB Database Server
 
-# 5️⃣ Masuk ke Container Laravel
+# #️⃣ Masuk ke Container Laravel
 $ docker exec -it laravel_app bash
 
-# 6️⃣ Install Dependency Laravel
+# #️⃣ Install Dependency Laravel
 $ composer install
 
-# 7️⃣ Generate APP Key
+# #️⃣ Generate APP Key
 $ php artisan key:generate
 
-# 8️⃣ Jalankan Migrasi
+# #️⃣ Jalankan Migrasi
 $ php artisan migrate
 
-# 9️⃣ Buat Symbolic Link ke Folder Storage
+# #️⃣ Buat Symbolic Link ke Folder Storage
 $ php artisan storage:link
+
+# #️⃣ Install Nano
+apt-get install nano -y
+
+# #️⃣ Konfigurasi Apache
+$ nano /etc/apache2/sites-available/000-default.conf
+
+# ⚙️ Konfigurasi Apache Service 000-default.conf
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html/public
+
+    <Directory /var/www/html/public>
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+# #️⃣ Restart Apache
+$ service apache2 restart
 
 # 🛠 Akses phpMyAdmin
 - URL: http://localhost:8080
