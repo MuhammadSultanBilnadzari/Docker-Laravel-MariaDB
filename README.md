@@ -71,6 +71,6 @@ Password: laravelpass
 
 
 # 🧑‍💻 Author
-# Muhammad Sultan Bilnadzari
-# 📍 Lhokseumawe, Aceh
-# 📅 25 May 2025
+ Muhammad Sultan Bilnadzari
+ 📍 Lhokseumawe, Aceh
+ 📅 25 May 2025
