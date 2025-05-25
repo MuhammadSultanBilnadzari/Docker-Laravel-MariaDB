@@ -61,10 +61,10 @@ $ php artisan migrate
 $ php artisan storage:link
 
 # 🛠 Akses phpMyAdmin
-URL: http://localhost:8080
-Server: mysql
-Username: laraveluser
-Password: laravelpass
+- URL: http://localhost:8080
+- Server: mysql
+- Username: laraveluser
+- Password: laravelpass
 
 # 🛠 Untuk melihat file yang telah diupload
 URL: http://localhost:8000/storage/uploads/namafile.jpg
