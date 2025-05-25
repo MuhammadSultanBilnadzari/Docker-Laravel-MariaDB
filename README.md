@@ -7,6 +7,7 @@ Project ini merupakan template Laravel yang sudah terintegrasi dengan Docker, me
 - Apache Web Server
 
 ---
+
 📂 Struktur Project (Singkat)
 docker-laravel-mariadb/
 ├── docker-compose.yml
@@ -17,14 +18,16 @@ docker-laravel-mariadb/
 │   └── ...
 └── README.md
 
+---
+
 ## 📦 Langkah Instalasi
 
 1️⃣ Clone Repository
-# git clone https://github.com/MuhammadSultanBilnadzari/docker-laravel-mysql.git
-# cd docker-laravel-mysql
+#git clone https://github.com/MuhammadSultanBilnadzari/docker-laravel-mysql.git
+#cd docker-laravel-mysql
 
 2️⃣ Salin File .env
-# cp .env.example .env
+#cp .env.example .env
 
 ⚙️ Konfigurasi Database di .env
 DB_CONNECTION=mysql
@@ -35,7 +38,7 @@ DB_USERNAME=laraveluser
 DB_PASSWORD=laravelpass
 
 3️⃣ Jalankan Docker
-# docker-compose up -d --build
+#docker-compose up -d --build
 
 Container yang akan berjalan:
 - Laravel App → http://localhost:8000
@@ -43,19 +46,19 @@ Container yang akan berjalan:
 - MariaDB Database Server
 
 4️⃣ Masuk ke Container Laravel
-# docker exec -it docker-laravel-mysql-app bash
+#docker exec -it docker-laravel-mysql-app bash
 
 5️⃣ Install Dependency Laravel
-# composer install
+#composer install
 
 6️⃣ Generate APP Key
-# php artisan key:generate
+#php artisan key:generate
 
 7️⃣ Jalankan Migrasi
-# php artisan migrate
+#php artisan migrate
 
 8️⃣ Buat Symbolic Link ke Folder Storage
-# php artisan storage:link
+#php artisan storage:link
 
 🛠 Akses phpMyAdmin
 URL: http://localhost:8080
@@ -64,7 +67,7 @@ Username: laraveluser
 Password: laravelpass
 
 🛠 Untuk melihat file yang telah diupload
-http://localhost:8000/storage/uploads/namafile.jpg
+URL: http://localhost:8000/storage/uploads/namafile.jpg
 
 
 🧑‍💻 Author
