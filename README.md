@@ -24,16 +24,16 @@ Project ini merupakan template Laravel yang sudah terintegrasi dengan Docker, me
 ## 📦 Langkah Instalasi
 
 # #️⃣ Clone Repository
-$ git clone https://github.com/MuhammadSultanBilnadzari/Docker-Laravel-Mariadb.git
+    git clone https://github.com/MuhammadSultanBilnadzari/Docker-Laravel-Mariadb.git
 
 # #️⃣ Masuk ke Folder
-$ cd Docker-Laravel-Mariadb
+    cd Docker-Laravel-Mariadb
 
 # #️⃣ Masuk ke folder src (Laravel)
-$ cd src
+    cd src
 
 # #️⃣ Salin File .env
-$ mv .env.example .env
+    mv .env.example .env
 
 # ⚙️ Konfigurasi Database di .env
     DB_CONNECTION=mysql
@@ -44,7 +44,7 @@ $ mv .env.example .env
     DB_PASSWORD=laravelpass
 
 # #️⃣ Jalankan Docker
-$ docker-compose up -d --build
+    docker-compose up -d --build
 
 # 🛠 Container yang akan berjalan:
 - Laravel App → http://localhost:8000
@@ -52,25 +52,25 @@ $ docker-compose up -d --build
 - MariaDB Database Server
 
 # #️⃣ Masuk ke Container Laravel
-$ docker exec -it laravel_app bash
+    docker exec -it laravel_app bash
 
 # #️⃣ Install Dependency Laravel
-$ composer install
+    composer install
 
 # #️⃣ Generate APP Key
-$ php artisan key:generate
+    php artisan key:generate
 
 # #️⃣ Jalankan Migrasi
-$ php artisan migrate
+    php artisan migrate
 
 # #️⃣ Buat Symbolic Link ke Folder Storage
-$ php artisan storage:link
+    php artisan storage:link
 
 # #️⃣ Install Nano
-apt-get install nano -y
+    apt-get install nano -y
 
 # #️⃣ Konfigurasi Apache
-$ nano /etc/apache2/sites-available/000-default.conf
+    nano /etc/apache2/sites-available/000-default.conf
 
 # ⚙️ Konfigurasi Apache Service 000-default.conf
     <VirtualHost *:80>
@@ -87,7 +87,7 @@ $ nano /etc/apache2/sites-available/000-default.conf
     </VirtualHost>
 
 # #️⃣ Restart Apache
-$ service apache2 restart
+    service apache2 restart
 
 # 🛠 Akses phpMyAdmin
 - URL: http://localhost:8080
