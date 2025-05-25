@@ -69,7 +69,7 @@ $ php artisan storage:link
 - Username: laraveluser
 - Password: laravelpass
 
-# 🛠 Untuk melihat file yang telah diupload
+# 🛠 Untuk Melihat File Yang Telah di Upload
 URL: http://localhost:8000/storage/uploads/namafile.jpg
 
 
