@@ -36,12 +36,12 @@ $ cd src
 $ mv .env.example .env
 
 # ⚙️ Konfigurasi Database di .env
-DB_CONNECTION=mysql
-DB_HOST=db
-DB_PORT=3306
-DB_DATABASE=laravel
-DB_USERNAME=laraveluser
-DB_PASSWORD=laravelpass
+    DB_CONNECTION=mysql
+    DB_HOST=db
+    DB_PORT=3306
+    DB_DATABASE=laravel
+    DB_USERNAME=laraveluser
+    DB_PASSWORD=laravelpass
 
 # #️⃣ Jalankan Docker
 $ docker-compose up -d --build
