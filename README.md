@@ -10,7 +10,7 @@ Project ini merupakan template Laravel yang sudah terintegrasi dengan Docker, me
 ---
 
 # 📂 Struktur Project (Singkat)
-- docker-laravel-mariadb/
+- Docker-Laravel-Mariadb/
 - ├── docker-compose.yml
 - ├── Dockerfile
 - ├── src/                  ← Laravel project ada di sini
@@ -24,10 +24,10 @@ Project ini merupakan template Laravel yang sudah terintegrasi dengan Docker, me
 ## 📦 Langkah Instalasi
 
 # 1️⃣ Clone Repository
-$ git clone https://github.com/MuhammadSultanBilnadzari/docker-laravel-mysql.git
+$ git clone https://github.com/MuhammadSultanBilnadzari/Docker-Laravel-Mariadb.git
 
 # 2️⃣ Masuk ke Folder
-$ cd docker-laravel-mysql
+$ cd Docker-Laravel-Mariadb
 
 # 3️⃣ Salin File .env
 $ cp .env.example .env
@@ -49,7 +49,7 @@ $ docker-compose up -d --build
 - MariaDB Database Server
 
 # 5️⃣ Masuk ke Container Laravel
-$ docker exec -it docker-laravel-mysql-app bash
+$ docker exec -it laravel_app bash
 
 # 6️⃣ Install Dependency Laravel
 $ composer install
