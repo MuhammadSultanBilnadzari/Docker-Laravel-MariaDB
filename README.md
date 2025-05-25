@@ -69,7 +69,7 @@ Project ini merupakan template Laravel yang sudah terintegrasi dengan Docker, me
 # #️⃣ Install Nano
     apt-get install nano -y
 
-# #️⃣ Konfigurasi Apache
+# #️⃣ Membuka Konfigurasi Apache
     nano /etc/apache2/sites-available/000-default.conf
 
 # ⚙️ Konfigurasi Apache Service 000-default.conf
